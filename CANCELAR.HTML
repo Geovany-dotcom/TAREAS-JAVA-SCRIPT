@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script>
+        let cadenas = [];
+
+        function agregarCadena() {
+            const cadena = prompt("Introduce una cadena de texto (o pulsa cancelar para finalizar):");
+            if (cadena === null) {
+                document.getElementById('resultado').innerText = cadenas.join('-');
+                return;
+            }
+            cadenas.push(cadena);
+            agregarCadena();
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <button onclick="agregarCadena()">Agregar cadena</button>
+    <p id="resultado"></p>
+</body>
+</html>
